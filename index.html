@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>雙子座 ♊ 10月感情運勢・盧恩×紫微占卜</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:       #F8F6F0;
+    --gold:     #B89040;
+    --gold-lt:  #D0AE60;
+    --mint:     #6898A0;
+    --mint-lt:  #88B8C0;
+    --silver:   #A8B8C0;
+    --ink:      #101818;
+    --ink-dim:  #384848;
+    --card-bg:  rgba(252,250,244,0.97);
+    --card-border: rgba(184,144,64,0.18);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:
+      radial-gradient(ellipse 800px 500px at 0% 0%, rgba(184,144,64,0.1), transparent 55%),
+      radial-gradient(ellipse 600px 600px at 100% 30%, rgba(104,152,160,0.09), transparent 55%),
+      radial-gradient(ellipse 500px 400px at 45% 100%, rgba(208,174,96,0.08), transparent 55%),
+      var(--bg);
+    color:var(--ink);
+    font-family:'Noto Sans TC',sans-serif;
+    line-height:2;
+    overflow-x:hidden;
+  }
+  .container{max-width:760px;margin:0 auto;padding:0 28px;}
+
+  @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+  .reveal{animation:fadeUp 1s cubic-bezier(.2,.7,.3,1) both;animation-play-state:paused;}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @keyframes glowDrift{0%,100%{opacity:0.06;transform:scale(1)}50%{opacity:0.1;transform:scale(1.05)}}
+  .floaty{position:fixed;pointer-events:none;z-index:0;opacity:0.09;animation:float var(--d) ease-in-out infinite;}
+  .glow-bg{position:fixed;top:-5%;right:-5%;width:380px;height:380px;border-radius:50%;
+    background:radial-gradient(circle,rgba(184,144,64,0.09),transparent 70%);
+    pointer-events:none;z-index:0;animation:glowDrift 9s ease-in-out infinite;}
+
+  /* HERO */
+  header.hero{position:relative;text-align:center;padding:96px 24px 80px;overflow:hidden;}
+  .hero-deco{position:absolute;top:50%;left:50%;transform:translate(-50%,-54%);width:520px;height:520px;opacity:0.07;z-index:0;}
+  .hero-content{position:relative;z-index:1;}
+  .month-badge{display:inline-block;background:rgba(184,144,64,0.12);border:1px solid rgba(184,144,64,0.28);border-radius:999px;padding:5px 18px;font-size:12.5px;font-weight:700;letter-spacing:0.2em;color:var(--gold);margin-bottom:16px;}
+  .eyebrow{font-size:12.5px;letter-spacing:0.44em;color:var(--gold);font-weight:700;margin-bottom:20px;text-transform:uppercase;}
+  .hero h1{
+    font-family:'Noto Serif TC',serif;font-weight:900;
+    font-size:clamp(38px,7.5vw,62px);line-height:1.2;
+    background:linear-gradient(135deg,var(--gold) 0%,var(--mint-lt) 50%,var(--gold-lt) 100%);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+    margin-bottom:10px;
+  }
+  .hero .sub{font-family:'Noto Serif TC',serif;font-size:clamp(17px,3vw,22px);color:var(--ink-dim);margin-bottom:28px;}
+  .hero p.lede{max-width:540px;margin:0 auto;font-size:16px;color:var(--ink-dim);line-height:2.1;}
+  .gold-line{width:100px;height:1.5px;margin:30px auto;background:linear-gradient(90deg,transparent,var(--gold),var(--mint-lt),transparent);border-radius:2px;}
+  .scroll-hint{font-size:12px;letter-spacing:0.28em;color:var(--gold);opacity:0.65;margin-top:8px;}
+  .scroll-hint svg{display:block;margin:10px auto 0;animation:bob 2s ease-in-out infinite;}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
+
+  /* SECTION */
+  section{position:relative;padding:58px 0;z-index:1;}
+  .section-title{font-family:'Noto Serif TC',serif;font-weight:700;font-size:clamp(21px,3.8vw,27px);text-align:center;margin-bottom:12px;color:var(--ink);}
+  .section-sub{text-align:center;color:var(--ink-dim);font-size:14.5px;max-width:480px;margin:0 auto 44px;}
+  .divider{width:56px;height:1.5px;margin:0 auto 44px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+
+  /* CORE BANNER */
+  .core-banner{
+    background:linear-gradient(135deg,rgba(184,144,64,0.1),rgba(104,152,160,0.07));
+    border-radius:26px;padding:38px 34px;text-align:center;
+    border:1px solid rgba(184,144,64,0.2);
+    box-shadow:0 8px 28px -15px rgba(184,144,64,0.14);
+  }
+  .core-banner .b-icon{font-size:36px;display:block;margin-bottom:16px;}
+  .core-banner h3{font-family:'Noto Serif TC',serif;font-size:20px;color:var(--gold);margin-bottom:14px;}
+  .core-banner p{color:var(--ink-dim);font-size:15.5px;max-width:500px;margin:0 auto;}
+
+  /* HARVEST BANNER */
+  .harvest-banner{
+    background:linear-gradient(135deg,rgba(184,144,64,0.12),rgba(208,174,96,0.08));
+    border-radius:26px;padding:36px 34px;text-align:center;
+    border:2px solid rgba(184,144,64,0.25);
+    box-shadow:0 8px 28px -15px rgba(184,144,64,0.18);
+  }
+  .harvest-banner .hb-icon{font-size:40px;display:block;margin-bottom:14px;}
+  .harvest-banner h3{font-family:'Noto Serif TC',serif;font-size:21px;color:var(--gold);margin-bottom:14px;}
+  .harvest-banner p{color:var(--ink-dim);font-size:15.5px;max-width:520px;margin:0 auto 16px;}
+  .harvest-note{display:inline-block;background:rgba(184,144,64,0.14);border:1px solid rgba(184,144,64,0.28);border-radius:12px;padding:10px 22px;font-size:14.5px;font-weight:700;color:var(--gold);}
+
+  /* RUNE CARDS */
+  .card-grid{display:flex;flex-direction:column;gap:24px;}
+  .oracle-card{
+    background:var(--card-bg);border:1px solid var(--card-border);
+    border-radius:22px;padding:30px 28px;
+    box-shadow:0 10px 34px -18px rgba(184,144,64,0.13);
+    transition:transform .3s,box-shadow .3s,border-color .3s;
+  }
+  .oracle-card:hover{transform:translateY(-4px);box-shadow:0 20px 44px -18px rgba(184,144,64,0.2);border-color:rgba(184,144,64,0.3);}
+  .card-top{display:flex;align-items:center;gap:15px;margin-bottom:14px;}
+  .card-glyph{
+    width:52px;height:52px;min-width:52px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Noto Serif TC',serif;font-size:22px;font-weight:700;
+  }
+  .g-gold{background:linear-gradient(135deg,var(--gold-lt),var(--gold));color:#101818;}
+  .g-mint{background:linear-gradient(135deg,var(--mint-lt),var(--mint));color:white;}
+  .card-name{font-family:'Noto Serif TC',serif;font-weight:700;font-size:18px;color:var(--ink);}
+  .card-tag{display:inline-block;margin-top:4px;font-size:11.5px;padding:3px 10px;border-radius:999px;font-weight:700;}
+  .tag-up{background:rgba(184,144,64,0.13);color:#5A3808;}
+  .card-body{color:var(--ink-dim);font-size:15px;}
+
+  /* ZIWEI BOX */
+  .ziwei-box{
+    background:linear-gradient(135deg,rgba(104,152,160,0.1),rgba(184,144,64,0.07));
+    border-radius:26px;padding:40px 34px;
+    border:1px solid rgba(104,152,160,0.2);
+    box-shadow:0 8px 28px -15px rgba(104,152,160,0.14);
+  }
+  .ziwei-header{text-align:center;margin-bottom:24px;}
+  .ziwei-badge{display:inline-block;background:rgba(104,152,160,0.15);border:1px solid rgba(104,152,160,0.28);border-radius:999px;padding:5px 16px;font-size:12.5px;font-weight:700;color:var(--mint-lt);margin-bottom:12px;}
+  .ziwei-header h3{font-family:'Noto Serif TC',serif;font-size:21px;color:var(--mint);}
+  .ziwei-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:22px;}
+  .ziwei-card{background:white;border:1px solid rgba(104,152,160,0.15);border-radius:16px;padding:20px 18px;box-shadow:0 4px 14px -8px rgba(104,152,160,0.1);}
+  .zc-star{font-family:'Noto Serif TC',serif;font-size:26px;font-weight:900;
+    background:linear-gradient(135deg,var(--gold),var(--mint));
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+    background-clip:text;display:block;margin-bottom:8px;}
+  .ziwei-card h4{font-family:'Noto Serif TC',serif;font-size:15px;color:var(--ink);margin-bottom:8px;}
+  .ziwei-card p{font-size:13px;color:var(--ink-dim);line-height:1.85;}
+  .ziwei-combo{background:rgba(252,250,244,0.9);border:1px solid rgba(184,144,64,0.15);border-radius:14px;padding:18px 20px;font-size:14.5px;color:var(--ink-dim);line-height:1.9;}
+  .ziwei-combo strong{color:var(--gold);}
+
+  /* MUTUAL BOX */
+  .mutual-box{
+    background:linear-gradient(135deg,rgba(184,144,64,0.1),rgba(104,152,160,0.07));
+    border-radius:26px;padding:40px 34px;text-align:center;
+    border:1px solid rgba(184,144,64,0.2);
+    box-shadow:0 8px 28px -15px rgba(184,144,64,0.14);
+  }
+  .mutual-box .mb-icon{font-size:36px;display:block;margin-bottom:14px;}
+  .mutual-box h3{font-family:'Noto Serif TC',serif;font-size:20px;color:var(--gold);margin-bottom:14px;}
+  .mutual-box p{color:var(--ink-dim);font-size:15.5px;max-width:500px;margin:0 auto;}
+
+  /* UNRESOLVED BOX */
+  .unresolved-box{
+    background:linear-gradient(135deg,rgba(104,152,160,0.1),rgba(184,144,64,0.07));
+    border-radius:26px;padding:40px 34px;
+    border:1px solid rgba(104,152,160,0.2);
+    box-shadow:0 8px 28px -15px rgba(104,152,160,0.12);
+  }
+  .unresolved-box h3{font-family:'Noto Serif TC',serif;font-size:20px;color:var(--mint);margin-bottom:18px;text-align:center;}
+  .unresolved-list{display:flex;flex-direction:column;gap:14px;}
+  .ur-item{background:white;border:1px solid rgba(104,152,160,0.14);border-radius:14px;padding:16px 20px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 4px 14px -8px rgba(104,152,160,0.1);}
+  .ur-icon{font-size:20px;min-width:26px;}
+  .ur-text h4{font-family:'Noto Serif TC',serif;font-size:15px;color:var(--ink);margin-bottom:4px;}
+  .ur-text p{font-size:13.5px;color:var(--ink-dim);line-height:1.85;}
+
+  /* SITUATIONS */
+  .situation-list{display:flex;flex-direction:column;gap:32px;}
+  .situation{background:var(--card-bg);border-radius:22px;padding:34px 30px;border:1px solid var(--card-border);border-left:4px solid var(--gold);box-shadow:0 8px 28px -15px rgba(184,144,64,0.12);}
+  .s2{border-left-color:var(--mint);}
+  .s3{border-left-color:var(--silver);}
+  .sit-tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:0.1em;padding:3px 13px;border-radius:999px;margin-bottom:13px;}
+  .s1 .sit-tag{background:rgba(184,144,64,0.12);color:#5A3808;}
+  .s2 .sit-tag{background:rgba(104,152,160,0.12);color:#1A4048;}
+  .s3 .sit-tag{background:rgba(168,184,192,0.15);color:#2A3848;}
+  .situation h3{font-family:'Noto Serif TC',serif;font-weight:700;font-size:19px;margin-bottom:13px;color:var(--ink);}
+  .situation p{color:var(--ink-dim);font-size:15px;}
+  .gold-tag{display:inline-block;background:rgba(184,144,64,0.07);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:10px 16px;margin:12px 0;font-size:14px;color:var(--ink-dim);font-style:italic;width:100%;}
+
+  /* COMPAT */
+  .compat-section{margin-bottom:32px;}
+  .compat-title{font-family:'Noto Serif TC',serif;font-size:18px;margin-bottom:18px;display:flex;align-items:center;gap:10px;}
+  .compat-title.good{color:#3A2808;}
+  .compat-title.warn{color:#1A3840;}
+  .compat-grid{display:flex;flex-direction:column;gap:14px;}
+  .compat-row{background:var(--card-bg);border:1px solid var(--card-border);border-radius:18px;padding:20px 22px;display:flex;gap:16px;align-items:center;box-shadow:0 4px 16px -8px rgba(184,144,64,0.1);}
+  .compat-rank{width:32px;height:32px;min-width:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:white;}
+  .rank-good{background:linear-gradient(135deg,#A89040,#806820);}
+  .rank-warn{background:linear-gradient(135deg,#688898,#487080);}
+  .compat-sign{width:44px;height:44px;min-width:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;color:white;}
+  .sign-good{background:linear-gradient(135deg,#B0A050,#887830);}
+  .sign-warn{background:linear-gradient(135deg,#7898A8,#587888);}
+  .compat-info{flex:1;}
+  .compat-info h4{font-family:'Noto Serif TC',serif;font-size:16px;color:var(--ink);margin-bottom:4px;}
+  .compat-info p{color:var(--ink-dim);font-size:13.5px;line-height:1.85;}
+
+  /* QUOTE */
+  .quote-box{background:var(--card-bg);border-radius:22px;padding:44px 36px;text-align:center;border:1px solid var(--card-border);box-shadow:0 8px 28px -15px rgba(184,144,64,0.12);}
+  .quote-box .qm{font-family:'Noto Serif TC',serif;font-size:52px;color:var(--gold);opacity:0.35;line-height:0.5;display:block;margin-bottom:16px;}
+  .quote-box p{font-family:'Noto Serif TC',serif;font-size:17.5px;color:var(--ink);max-width:500px;margin:0 auto;line-height:2.1;}
+
+  /* 199 */
+  .price-block{background:linear-gradient(135deg,#080C08,var(--gold));border-radius:26px;padding:44px 36px;text-align:center;position:relative;overflow:hidden;box-shadow:0 20px 50px -20px rgba(184,144,64,0.45);}
+  .price-block::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(136,184,192,0.16),transparent 50%),radial-gradient(circle at 20% 80%,rgba(208,174,96,0.15),transparent 50%);}
+  .price-inner{position:relative;z-index:1;}
+  .price-tag{display:inline-block;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);border-radius:999px;padding:6px 20px;font-size:13px;font-weight:700;letter-spacing:0.15em;color:white;margin-bottom:8px;}
+  .price-limit{display:inline-block;background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.28);border-radius:999px;padding:4px 14px;font-size:12px;font-weight:700;color:#FAF0D0;margin-bottom:16px;margin-left:8px;}
+  .price-block h2{font-family:'Noto Serif TC',serif;font-weight:900;font-size:clamp(22px,4vw,30px);color:white;margin-bottom:14px;}
+  .price-amount{font-family:'Noto Serif TC',serif;font-size:clamp(44px,8vw,64px);font-weight:900;color:#FAF0D0;line-height:1;margin:20px 0 10px;}
+  .price-amount span{font-size:0.5em;vertical-align:top;margin-top:12px;display:inline-block;}
+  .price-block p{color:rgba(255,255,255,0.88);font-size:15.5px;max-width:460px;margin:0 auto 28px;}
+  .price-cta{display:inline-block;background:white;color:var(--gold);font-family:'Noto Serif TC',serif;font-weight:700;font-size:16px;padding:14px 36px;border-radius:999px;text-decoration:none;transition:transform .2s,box-shadow .2s;box-shadow:0 8px 24px -8px rgba(8,12,8,0.3);}
+  .price-cta:hover{transform:translateY(-2px);box-shadow:0 14px 30px -8px rgba(8,12,8,0.38);}
+  .price-note{margin-top:18px;font-size:13px;color:rgba(255,255,255,0.5);}
+
+  /* CTA */
+  .cta-section{padding:70px 0 100px;}
+  .cta-header{text-align:center;margin-bottom:44px;}
+  .cta-eyebrow{font-size:12.5px;letter-spacing:0.35em;color:var(--gold);font-weight:700;margin-bottom:14px;text-transform:uppercase;display:block;}
+  .cta-header h2{font-family:'Noto Serif TC',serif;font-weight:700;font-size:clamp(21px,3.8vw,28px);color:var(--ink);margin-bottom:13px;}
+  .cta-header p{color:var(--ink-dim);font-size:15px;max-width:460px;margin:0 auto;}
+  .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:32px;}
+  .cta-opt{background:var(--card-bg);border:1px solid var(--card-border);border-radius:20px;padding:26px 22px;text-align:center;box-shadow:0 6px 22px -14px rgba(184,144,64,0.12);transition:transform .3s,border-color .3s;}
+  .cta-opt:hover{transform:translateY(-4px);border-color:rgba(184,144,64,0.3);}
+  .cta-opt .icon{font-size:26px;display:block;margin-bottom:11px;}
+  .cta-opt h3{font-family:'Noto Serif TC',serif;font-size:16px;color:var(--ink);margin-bottom:9px;}
+  .cta-opt p{font-size:13px;color:var(--ink-dim);margin-bottom:16px;line-height:1.8;}
+  .line-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 20px;background:linear-gradient(135deg,var(--gold),var(--mint));color:white;font-weight:700;border-radius:999px;font-size:13.5px;text-decoration:none;transition:opacity .2s,transform .2s;}
+  .line-btn:hover{opacity:0.85;transform:translateY(-1px);}
+  .cta-note{text-align:center;background:rgba(184,144,64,0.07);border:1px solid rgba(184,144,64,0.15);border-radius:14px;padding:20px 24px;color:var(--ink-dim);font-size:14px;}
+
+  footer{text-align:center;padding:40px 24px 60px;font-size:12.5px;color:rgba(184,144,64,0.35);letter-spacing:0.08em;}
+
+  @media(max-width:600px){
+    .hero{padding:80px 20px 64px;}
+    .ziwei-grid{grid-template-columns:1fr;}
+    .cta-grid{grid-template-columns:1fr;}
+    .situation,.oracle-card,.compat-row{padding:24px 18px;}
+    .price-block{padding:36px 22px;}
+    .quote-box{padding:32px 22px;}
+  }
+</style>
+</head>
+<body>
+<div class="glow-bg"></div>
+<script>
+  const floaties=[
+    {top:'6%',left:'3%',size:17,d:'7s',e:'🌾'},
+    {top:'28%',left:'92%',size:14,d:'9s',e:'✨'},
+    {top:'58%',left:'2%',size:16,d:'8s',e:'🌿'},
+    {top:'80%',left:'91%',size:14,d:'6s',e:'💫'},
+  ];
+  document.addEventListener('DOMContentLoaded',()=>{
+    floaties.forEach((f,i)=>{
+      const el=document.createElement('div');
+      el.className='floaty';
+      el.style.cssText=`top:${f.top};left:${f.left};font-size:${f.size}px;--d:${f.d};animation-delay:${i*1.8}s`;
+      el.textContent=f.e;
+      document.body.appendChild(el);
+    });
+  });
+</script>
+
+<header class="hero">
+  <svg class="hero-deco" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="100" r="95" fill="none" stroke="#B89040" stroke-width="1.2"/>
+    <circle cx="100" cy="100" r="78" fill="none" stroke="#6898A0" stroke-width="0.8" stroke-dasharray="4 6"/>
+    <circle cx="100" cy="100" r="60" fill="none" stroke="#D0AE60" stroke-width="1"/>
+    <circle cx="100" cy="100" r="42" fill="none" stroke="#B89040" stroke-width="0.6" stroke-dasharray="2 5"/>
+    <circle cx="100" cy="100" r="24" fill="none" stroke="#6898A0" stroke-width="0.8"/>
+    <!-- Jera豐收麥穗造型 -->
+    <path d="M100,60 L108,80 L100,75 L92,80 Z" fill="none" stroke="#D0AE60" stroke-width="1" opacity="0.55"/>
+    <line x1="100" y1="75" x2="100" y2="140" stroke="#B89040" stroke-width="1.1" opacity="0.5"/>
+    <path d="M100,95 Q112,88 116,95 Q112,102 100,98" fill="none" stroke="#D0AE60" stroke-width="0.8" opacity="0.45"/>
+    <path d="M100,95 Q88,88 84,95 Q88,102 100,98" fill="none" stroke="#6898A0" stroke-width="0.8" opacity="0.45"/>
+    <path d="M100,112 Q112,105 116,112 Q112,119 100,115" fill="none" stroke="#D0AE60" stroke-width="0.8" opacity="0.4"/>
+    <path d="M100,112 Q88,105 84,112 Q88,119 100,115" fill="none" stroke="#6898A0" stroke-width="0.8" opacity="0.4"/>
+  </svg>
+  <div class="hero-content reveal">
+    <div class="month-badge">🌾 October 2026</div>
+    <div class="eyebrow">October Rune × ZiWei Reading · 2026</div>
+    <h1>♊ 雙子座</h1>
+    <div class="sub">10月感情運勢｜盧恩符文 × 紫微斗數解析</div>
+    <div class="gold-line"></div>
+    <p class="lede">雙子座，這個10月是你感情的豐收月——Jera 說過去種下的這個月要結果了，好的種子結好果，沒解決的部分也一起浮出來。以牙還牙不是報復，是宇宙最公平的回報循環：你給出去的認真，這個月要回來了。天機說你感情思維細膩，寅說行動力到位——這個月，想清楚了就動。</p>
+    <div class="scroll-hint">往下看，牌說了什麼
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B89040" stroke-width="1.8"><path d="M12 4v16M5 13l7 7 7-7"/></svg>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- CORE BANNER -->
+  <section id="keynote">
+    <div class="core-banner reveal">
+      <span class="b-icon">🌾</span>
+      <h3>這個月的核心：以牙還牙——你給出去的，這個月要回來了</h3>
+      <p>Jera 說宇宙最公平的事情就是循環——你這段時間在感情上付出的、努力的、等待的，這個月到了結果的時間。好的付出結好果，Kenaz 說那個真實的火花這個月會以一種讓你確認「對，就是這樣」的方式顯現。但 Jera 的豐收是完整的——沒有解決的那個部分，也在這個月一起浮出來，讓你有機會面對它、處理它，讓這個感情的循環真正完成。天機星說你感情細膩，地支寅說行動力到位——這個月不只是感受，是行動讓那個豐收真正落地。</p>
+    </div>
+  </section>
+
+  <!-- HARVEST BANNER -->
+  <section id="harvest">
+    <div class="harvest-banner reveal">
+      <span class="hb-icon">🌿</span>
+      <h3>以牙還牙——好的回來，沒解決的也回來</h3>
+      <p>Jera 說的豐收循環是完整的，不是只有甜的部分。這個月你的感情場域裡，過去你認真對待的那些，會以讓你感覺「原來值了」的方式回到你這裡；但那些你一直知道存在但沒有正面處理的，這個月也會浮出水面。這不是懲罰，這是 Jera 說的那個讓感情循環完整的必要過程——那些浮出來的東西，是讓這段感情真正走向下一個階段的那道門。</p>
+      <div class="harvest-note">🌾 Jera + Kenaz：豐收到了，迎接它，也面對它</div>
+    </div>
+  </section>
+
+  <!-- RUNE CARDS -->
+  <section id="rune-cards">
+    <h2 class="section-title">盧恩牌陣解析</h2>
+    <p class="section-sub">兩張牌說出雙子座10月感情能量的完整樣貌——豐收與火花同時在。</p>
+    <div class="divider"></div>
+    <div class="card-grid">
+
+      <article class="oracle-card reveal">
+        <div class="card-top">
+          <div class="card-glyph g-gold">ᛃ</div>
+          <div>
+            <div class="card-name">Jera 豐收・時機到了，好的壞的都要結果</div>
+            <span class="card-tag tag-up">盧恩・正位・主牌</span>
+          </div>
+        </div>
+        <div class="card-body">
+          Jera 是豐收和循環的符文，它的形狀本身就是兩個方向相對的能量，說的是宇宙完整的循環——春天播種，秋天收割，沒有例外。這個月 Jera 對雙子座說的是：你這段時間在感情裡種下的所有東西，這個月要結果了。那些你認真等待的、那些你為了一段感情默默付出的、那些你選擇留下而不是離開的，Jera 說那些種子這個月發芽了，那個「原來值了」的感覺這個月會讓你感受到。但 Jera 是誠實的，它不只給你甜的——那些你一直知道有問題但沒有解決的、那些你選擇忽略但從來沒有消失的，這個月也跟著那個豐收一起浮出來。不是為了讓你痛苦，而是為了讓那個循環真正完成。Jera 說：面對那個浮出來的，比繼續假裝它不存在，更讓這段感情有未來。
+        </div>
+      </article>
+
+      <article class="oracle-card reveal">
+        <div class="card-top">
+          <div class="card-glyph g-mint">ᚲ</div>
+          <div>
+            <div class="card-name">Kenaz 火炬・你們明明互相喜歡，這個月讓它燃起來</div>
+            <span class="card-tag tag-up">盧恩・正位</span>
+          </div>
+        </div>
+        <div class="card-body">
+          Kenaz 是火炬和熱情的符文，這個月它告訴雙子座一件很重要的事：那個火花是雙向的，你感覺到了他/她，他/她也感覺到了你，而且那個感覺是真實的，不是你的錯覺。雙子座有時候會因為習慣性的繞圈子——分析太多、想太多「萬一」、用聰明來逃避直接說出感受——讓 Kenaz 的火焰一直停在「快要燃起來但還沒有」的狀態。但這個月 Jera 說時機到了，Kenaz 說火炬在等你讓它真正燒起來——那個讓對方感受到你的心意的動作，這個月做了，那把火就真的亮起來了。天機說你感情細膩，地支寅說行動力到位——這個月想清楚了就說，說了就比任何計算都更有力量。
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ZIWEI BOX -->
+  <section id="ziwei">
+    <h2 class="section-title">紫微斗數牌卡解析</h2>
+    <p class="section-sub">天機星 × 地支寅，這個月感情的細膩與行動力同時在線。</p>
+    <div class="divider"></div>
+    <div class="ziwei-box reveal">
+      <div class="ziwei-header">
+        <div class="ziwei-badge">✦ 紫微斗數・感情星曜解析</div>
+        <h3>天機星 × 地支寅・細膩感知，行動豐收</h3>
+      </div>
+      <div class="ziwei-grid">
+        <div class="ziwei-card">
+          <span class="zc-star">天機</span>
+          <h4>天機星・感情細膩，容易想太多</h4>
+          <p>天機是智慧和變動的星曜，有天機能量的人感情感知非常細膩——你能感受到很多別人感受不到的微妙訊號，知道對方情緒的細微變化，能感應到感情裡沒有說出口的那些東西。這是天機的優點，但天機也容易帶來一個困境：因為感受太細膩，所以想太多，想到最後反而沒有行動。這個月天機說讓那份細膩的感知成為你的優勢，但不要讓它讓你一直停在感受的地方而不往前走。</p>
+        </div>
+        <div class="ziwei-card">
+          <span class="zc-star">寅</span>
+          <h4>地支寅・春天虎年的行動力</h4>
+          <p>寅是十二地支裡屬木、代表虎、春天的破土行動力——它的能量是「準備好了，出發」的積極向外。地支寅這個月說雙子座的感情行動力這個月特別強，那個「想動」的衝勁是真實的，不是衝動。Jera 說豐收需要行動去接住，寅說這個月那個行動力是你的助力——不要讓天機的細膩思考把寅的行動力消耗掉，讓這兩個能量同時工作：先感受清楚（天機），然後動（寅）。</p>
+        </div>
+      </div>
+      <div class="ziwei-combo">
+        <strong>天機 + 地支寅 + Jera + Kenaz 全部說同一件事：</strong><br>
+        你對感情有非常細膩的感知（天機），而且這個月你的行動力是到位的（寅），Jera 說過去種下的這個月要結果了，Kenaz 說你們互相喜歡是真的。<strong>這個月最有力量的一句話是：想清楚了就動。天機幫你感受清楚，寅幫你動，Jera 保證那個行動這個月會有真實的回應。</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- MUTUAL BOX -->
+  <section id="mutual">
+    <div class="mutual-box reveal">
+      <span class="mb-icon">🔥</span>
+      <h3>明明互相喜歡——Kenaz 說那個火花是雙向的</h3>
+      <p>你有沒有遇過這種狀況：你知道你喜歡他/她，你也能感受到他/她對你有感覺，但就是卡在那裡，兩個人都在等，都不說，然後就這樣一直等著。天機說你的感知是準的——那個「他/她也有感覺」的直覺，這個月是真的。Kenaz 說那個火花是雙向的，不是你的單方面感覺。Jera 說這個月是豐收的時機，那個讓你們一直停在「快要，但還沒有」的結果，這個月已經準備好了——它在等那個讓它真正發生的行動。地支寅說你這個月的行動力在，雙子座，這個月讓那個一直在等的感覺，說出來，或者讓行動說出來。那個回應，Kenaz 說已經在那裡等你了。</p>
+    </div>
+  </section>
+
+  <!-- UNRESOLVED BOX -->
+  <section id="unresolved">
+    <h2 class="section-title">沒解決的部分也浮出來了——Jera 說面對它</h2>
+    <p class="section-sub">豐收是完整的，不只有甜的。這幾種狀況這個月可能出現，面對比迴避更有力量。</p>
+    <div class="divider"></div>
+    <div class="unresolved-box reveal">
+      <h3>🌿 Jera 說，面對它才能讓循環真正完成</h3>
+      <div class="unresolved-list">
+        <div class="ur-item">
+          <span class="ur-icon">💬</span>
+          <div class="ur-text">
+            <h4>那句一直沒說清楚的話，這個月浮出來了</h4>
+            <p>Jera 說沒有說清楚的東西這個月會自己浮出來——可能是一個你一直想說但沒說的感受、可能是對方一直想說但沒說的什麼讓你這個月感受到了。天機說你的感知很細膩，你會感覺到那個浮出來的東西。Kenaz 說說了之後那個火花才能真正燒起來——讓那句一直沒說清楚的話，這個月找到它的出口。</p>
+          </div>
+        </div>
+        <div class="ur-item">
+          <span class="ur-icon">🌀</span>
+          <div class="ur-text">
+            <h4>一段舊的能量回來了，需要你決定怎麼處理</h4>
+            <p>Jera 說循環——可能有一段你以為已經結束的緣分，這個月有了新的動靜，或者讓你重新感受到了它的存在。這不一定是要你重新開始，但 Jera 說那個舊的循環這個月需要一個真正的完成——不是逃避，不是繼續拖著，而是讓自己清楚地知道那對你來說是什麼，然後給它一個真正的答案。</p>
+          </div>
+        </div>
+        <div class="ur-item">
+          <span class="ur-icon">⚖️</span>
+          <div class="ur-text">
+            <h4>感情裡的不平衡感，這個月變得很明顯</h4>
+            <p>Jera 說以牙還牙，在感情裡的意思是：付出和回報的比例這個月會以一種清晰的方式顯現。如果這段感情的能量是均衡的，Jera 會讓你感覺到那份均衡；如果有不均衡的地方，Jera 也會讓那個不均衡這個月變得很難忽視。天機說你感情細膩，你會感受到那個平衡感——Kenaz 說面對那個感受，讓它成為你們深化感情的起點，而不是繼續壓著它。</p>
+          </div>
+        </div>
+        <div class="ur-item">
+          <span class="ur-icon">🔑</span>
+          <div class="ur-text">
+            <h4>雙子座的習慣性迴避——這個月行不通了</h4>
+            <p>雙子座有時候用聰明來迴避直接面對感情——用玩笑跳過嚴肅的話題、用分析取代真實的感受、用「我再想想」延遲那個需要說出口的答案。Jera 說這個月那個迴避的代價比以前更高，因為豐收的時刻到了，這個月的行動或不行動都會以一種更清晰的方式在感情裡留下印記。地支寅說行動力在，這個月讓那個行動力用在真實面對感情上，而不是繼續繞圈子。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SITUATIONS -->
+  <section id="situations">
+    <h2 class="section-title">你的10月</h2>
+    <p class="section-sub">找到你的狀態，看看這個月的牌對你說了什麼。</p>
+    <div class="divider"></div>
+    <div class="situation-list">
+
+      <div class="situation s1 reveal">
+        <span class="sit-tag">✦ 單身・明明有感覺</span>
+        <h3>Jera 說時機到了，這個月讓那個感覺說出來</h3>
+        <p>Kenaz 說你們互相喜歡是真的——你的天機感知告訴你的那個「他/她也有感覺」不是你的幻覺，是真實存在的雙向能量。Jera 說這個月是那個感情循環完成的時機，那個讓你們一直卡在「快要，但還沒有」狀態的結果，這個月準備好了。但它需要一個行動——不需要是告白，可以是一個讓對方清楚感受到你的在意的舉動、一句讓對方感覺你不只是朋友的話。</p>
+        <div class="gold-tag">「我感覺他/她對我有感覺，我也很喜歡他/她，但我一直在等一個更確定的訊號——然後我們就這樣一直等著彼此。」</div>
+        <p>地支寅說你這個月有那個行動的力量，Kenaz 說那個回應在等你給它一個出口。Jera 說這個月是豐收的時刻，你過去對這段感情的認真和等待，這個月要結果了——讓那個結果發生，讓地支寅的行動力推著你走那一步。不需要完美的時機，需要的是真實的你。</p>
+      </div>
+
+      <div class="situation s2 reveal">
+        <span class="sit-tag">🌿 有交往對象</span>
+        <h3>Jera 說這段感情這個月進入一個更真實的階段</h3>
+        <p>Jera 在交往關係裡說的豐收，是一種讓你們之間的連結變得更真實、更有重量的過程——這個月你們之間的感情能量有一個重要的完成在發生。那個完成可能是一次讓你們都感覺「原來我們之間有這麼深的東西」的對話，可能是一個讓你們的承諾更明確的瞬間，也可能是那個一直沒有說清楚的東西這個月浮出來，讓你們有機會真正面對它。Kenaz 說那個火花是真實的，這個月讓它燒得更亮一點。</p>
+        <div class="gold-tag">「我感覺我們的感情這個月有點不一樣，好像有什麼東西要改變——但我不確定是要往更好的方向走，還是要面對什麼不太好的東西。」</div>
+        <p>Jera 說兩個都對——更好的方向和需要面對的東西這個月都在，而且它們是同一件事。那個需要你面對的東西，面對了之後，才是感情往更好的方向走的那個入口。天機說你的感情感知很細膩，你能感受到那個東西在哪裡——地支寅說行動力在，這個月讓自己走向那個對話，讓 Jera 的豐收循環真正完成。</p>
+      </div>
+
+      <div class="situation s3 reveal">
+        <span class="sit-tag">💫 有結婚對象／已婚</span>
+        <h3>長期關係的豐收——這段時間的積累這個月有了重量</h3>
+        <p>Jera 在長期關係裡說的豐收，是那種讓你們在某個平常的瞬間突然感覺到「原來我們走了這麼久、這麼深」的厚重感。這個月可能是一件讓你們都感受到這段感情的份量的事，讓你們重新確認彼此對對方的重要性。Kenaz 說那個火花在長期關係裡不是消失了，而是變成了另一種溫度——不是激烈的，而是那種讓人感覺「這個人是我的家」的深層穩定。</p>
+        <div class="gold-tag">「有時候感覺長期在一起之後什麼都習慣了，沒有特別的感覺——但有時候又突然在某個瞬間感覺到，這個人真的很重要。」</div>
+        <p>Jera 說這個月會有更多那個「突然感覺到」的瞬間——讓那個瞬間被說出來、被表達出來。天機說你對感情細膩，你感受到的那份重量是真實的，地支寅說讓那份感受以一個具體的行動落地——一句話、一個讓對方感覺你有在看見他/她的行動，讓這個月的豐收在你們最重要的關係裡留下一個真實的印記。</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMPAT -->
+  <section id="compat">
+    <h2 class="section-title">10月雙子座感情星座配對</h2>
+    <p class="section-sub">這個月和誰的豐收能量最共鳴？和誰容易讓豐收一直等著？</p>
+    <div class="divider"></div>
+
+    <div class="compat-section reveal">
+      <div class="compat-title good">✦ 感情能量最合・這個月最有豐收共鳴</div>
+      <div class="compat-grid">
+        <div class="compat-row">
+          <div class="compat-rank rank-good">1</div>
+          <div class="compat-sign sign-good">♋</div>
+          <div class="compat-info">
+            <h4>巨蟹座 ♋・第一名</h4>
+            <p>巨蟹的深情和安全感這個月是雙子 Jera 豐收最需要的落地土壤——你的豐收需要一個真正接得住它重量的人，巨蟹就是那個人。Kenaz 說火花是雙向的，在巨蟹面前那個火花有了一個讓雙子感覺「被真正接住」的溫度。天機說雙子感情細膩，巨蟹的感受力讓那份細膩有了真實的回應，不是停在感受的地方，而是真的讓感情往前走。地支寅的行動力在巨蟹的接納面前最容易自然地流出來。</p>
+          </div>
+        </div>
+        <div class="compat-row">
+          <div class="compat-rank rank-good">2</div>
+          <div class="compat-sign sign-good">♏</div>
+          <div class="compat-info">
+            <h4>天蠍座 ♏・第二名</h4>
+            <p>Jera 的豐收在天蠍面前最有份量——天蠍的深度讓雙子這個月結出來的那個果，有一個真正懂得它價值的接收者。Kenaz 說互相喜歡，天蠍的深情讓那個「互相喜歡」不是輕飄飄的感覺，而是一種讓雙子感覺有重量、有真實感的連結。天機說雙子思慮細膩，天蠍的洞察讓那份細膩被真正看見，讓雙子不需要解釋就被理解。</p>
+          </div>
+        </div>
+        <div class="compat-row">
+          <div class="compat-rank rank-good">3</div>
+          <div class="compat-sign sign-good">♒</div>
+          <div class="compat-info">
+            <h4>水瓶座 ♒・第三名</h4>
+            <p>同風象，水瓶和雙子之間 Kenaz 的火花有一種思想共鳴的特殊加持——當雙子說了一句話，水瓶的回應讓雙子感覺「他/她懂我說的」，那個被理解的感覺這個月特別讓 Jera 的豐收有溫度。天機說雙子感情細膩，水瓶的智識深度讓那份細膩找到了可以真正共鳴的頻率。地支寅說行動力在，水瓶和雙子這個月有一個讓感情自然往前走一步的輕鬆能量。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="compat-section reveal">
+      <div class="compat-title warn">⚠️ 這個月容易讓豐收一直等著・需要注意</div>
+      <div class="compat-grid">
+        <div class="compat-row">
+          <div class="compat-rank rank-warn">1</div>
+          <div class="compat-sign sign-warn">♊</div>
+          <div class="compat-info">
+            <h4>雙子座 ♊・第一名</h4>
+            <p>兩個雙子在一起，Jera 的豐收可能永遠在等——因為兩個人都有天機的細膩思慮，都在感受、都在分析、都在等對方先動，結果就是兩個人都感受到了 Kenaz 的火花，但都在等對方先說。地支寅說行動力在，但兩個雙子的行動力互相抵消在「你先說」和「你先說」的循環裡，讓這個月本來可以結果的豐收繼續等著。這個組合這個月必須有一個人先破那個循環。</p>
+          </div>
+        </div>
+        <div class="compat-row">
+          <div class="compat-rank rank-warn">2</div>
+          <div class="compat-sign sign-warn">♍</div>
+          <div class="compat-info">
+            <h4>處女座 ♍・第二名</h4>
+            <p>處女這個月的細節分析讓雙子的天機思慮更重——兩個人都在仔細感受和分析彼此，但都沒有人走那一步，讓 Jera 說的豐收一直停在「快要結果，但還沒」的狀態。Kenaz 說火花是真的，但在兩個都在分析的人之間，那個火炬沒有人去點燃它。地支寅說這個月有行動力，但雙子和處女放在一起這個月的行動力都被思考消耗掉了。</p>
+          </div>
+        </div>
+        <div class="compat-row">
+          <div class="compat-rank rank-warn">3</div>
+          <div class="compat-sign sign-warn">♑</div>
+          <div class="compat-info">
+            <h4>摩羯座 ♑・第三名</h4>
+            <p>摩羯的穩健慢節奏和地支寅的行動能量這個月完全對不上速度——雙子這個月有 Jera 說的豐收要接住，需要一個有活力能跟上這個月節奏的人，但摩羯的謹慎讓那個豐收的時機一再延遲。Kenaz 說火花是真的，但摩羯這個月的能量讓那個火炬的溫度升不起來，讓雙子感覺這段感情好像停在一個等待的地方，而不是往前走的地方。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section id="quote">
+    <div class="quote-box reveal">
+      <span class="qm">"</span>
+      <p>雙子座，Jera 說你種下的這個月要結果了，Kenaz 說那個火花是雙向真實的，天機說你感受得到，地支寅說你有那個行動力——這個10月，想清楚了就動，讓那個豐收真正落地。</p>
+    </div>
+  </section>
+
+  <!-- 199 BLOCK -->
+  <section id="price" style="padding:60px 0 0;position:relative;z-index:1;">
+    <div class="container">
+      <div class="price-block reveal">
+        <div class="price-inner">
+          <div class="price-tag">✦ 第一次體驗限定</div>
+          <div class="price-limit">⚠️ 本月名額有限</div>
+          <h2>麵包學長初次檢測</h2>
+          <div class="price-amount"><span>NT$</span>199</div>
+          <p>想確認 Kenaz 說的那個雙向火花是真的嗎？想知道 Jera 說的豐收具體會怎麼發生在你的感情裡？麵包學長初次檢測幫你快速看清楚這個月感情能量的方向，讓豐收真正落地。本月名額有限，額滿暫停。</p>
+          <a class="price-cta" href="https://line.me/ti/p/~423hhxdn" target="_blank" rel="noopener">留言「199」立即報名</a>
+          <div class="price-note">私訊麵包學長 LINE @423hhxdn，留言「199」即可・額滿為止</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-header reveal">
+      <span class="cta-eyebrow">✦ 讓豐收真正落地</span>
+      <h2>占卜幫你把這個月的感情能量看清楚</h2>
+      <p>當你知道 Jera 的豐收從哪個方向來、Kenaz 的火花在哪裡等你，這個月的行動才能真正打到對的地方。</p>
+    </div>
+    <div class="cta-grid reveal">
+      <div class="cta-opt">
+        <span class="icon">🔮</span>
+        <h3>盧恩符文占卜</h3>
+        <p>想確認 Kenaz 說的火花是不是雙向的？想知道 Jera 說沒解決的部分是什麼、怎麼面對？盧恩幫你看清楚。</p>
+        <a class="line-btn" href="https://line.me/ti/p/~423hhxdn" target="_blank" rel="noopener">私訊了解</a>
+      </div>
+      <div class="cta-opt">
+        <span class="icon">⭐</span>
+        <h3>紫微斗數合盤</h3>
+        <p>想看你和那個讓你感覺互相喜歡的人，命盤緣分深淺？合盤幫你確認天機感知到的那份連結，在命盤上有多深。</p>
+        <a class="line-btn" href="https://line.me/ti/p/~423hhxdn" target="_blank" rel="noopener">私訊了解</a>
+      </div>
+      <div class="cta-opt">
+        <span class="icon">💰</span>
+        <h3>金錢靈氣體驗</h3>
+        <p>想讓整體能量更好、讓地支寅的行動力更自然地流出來？金錢靈氣幫你把能量補滿，讓這個月的豐收更容易接住。</p>
+        <a class="line-btn" href="https://line.me/ti/p/~423hhxdn" target="_blank" rel="noopener">私訊了解</a>
+      </div>
+      <div class="cta-opt">
+        <span class="icon">🌀</span>
+        <h3>奇門遁甲・開桃花</h3>
+        <p>想讓 Jera 的豐收在最好的時機顯現？想讓地支寅的行動找到最有力量的那個時間點？奇門遁甲幫你算清楚。</p>
+        <a class="line-btn" href="https://line.me/ti/p/~423hhxdn" target="_blank" rel="noopener">私訊了解</a>
+      </div>
+    </div>
+    <div class="cta-note reveal">
+      📣 10月集體體驗冥想活動即將登場，特別適合這個月需要讓 Jera 的感情循環真正完成、讓 Kenaz 的火花找到燃燒出口的雙子座，名額有限，歡迎隨時私訊詢問。
+    </div>
+  </div>
+</section>
+
+<footer>♊ Gemini Love Reading · Rune × ZiWei · October 2026</footer>
+
+<script>
+  const observer=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{if(e.isIntersecting) e.target.style.animationPlayState='running';});
+  },{threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
